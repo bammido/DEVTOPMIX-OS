@@ -1,0 +1,44 @@
+###
+GET http://localhost:3000/ordens-de-servico
+
+###
+GET http://localhost:3000/ordens-de-servico/2
+
+###
+POST http://localhost:3000/ordens-de-servico
+Content-Type: application/json
+
+{
+    "data": "string",
+    "cliente": 1,
+    "colaborador": 1,
+    "texto": "mudei"
+}
+
+###
+GET http://localhost:3000/clientes
+
+###
+GET http://localhost:3000/clientes/3
+
+###
+POST http://localhost:3000/clientes
+Content-Type: application/json
+
+{
+    "nome": "teste3"
+}
+
+
+###
+GET http://localhost:3000/colaboradores
+
+###
+POST http://localhost:3000/colaboradores
+Content-Type: application/json
+
+{
+    "nome": "bryan",
+    "email": "bryan@email.com",
+    "senha": "123456"
+}
