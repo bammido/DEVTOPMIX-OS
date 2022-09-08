@@ -11,8 +11,8 @@ type SignIn = {
 export default function Login() {
 
   const [form, onChange] = useForm({
-    email: 'bryan@email.com',
-    senha: '123456'
+    email: '',
+    senha: ''
   })
 
   const {senha, email}:SignIn  = form
