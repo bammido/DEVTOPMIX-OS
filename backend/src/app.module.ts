@@ -44,8 +44,6 @@ export class AppModule implements NestModule {
       .exclude({path: 'colaboradores/login', method: RequestMethod.POST})
       .forRoutes(
         {path: 'clientes', method: RequestMethod.POST},
-        {path: 'colaboradores', method: RequestMethod.POST},
-        {path: 'colaboradores', method: RequestMethod.POST},
         {path: 'ordens-de-servico', method: RequestMethod.GET}
         )
   }
