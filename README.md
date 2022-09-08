@@ -14,7 +14,6 @@ Projeto não foi finalizado 100%, porém já é possível realizar as principais
 * Algúm programa para 'startar' o servidor MySql (Xampp pro exemplo) , obs: por padrão o backend roda na porta 3306, caso queria mudar será necessário mudar nas configs (será mostrado mais a frente)
 * no servidor local Criar uma database , obs: por padrão o nome da database é DEVTOPMIX, caso queria mudar será necessário mudar nas configs (será mostrado mais a frente)
 
-
 #### Passos: 
 
 * Primeiro vá até a pasta backend e rode o comando ``` npm i ```, em seguida ``` npm run build  ``` e após ``` npm start ```
@@ -25,6 +24,14 @@ Projeto não foi finalizado 100%, porém já é possível realizar as principais
 } ```
 * Agora vá até a pasta fronend e siga o primeiro passo  ``` npm i ```, em seguida ``` npm run build  ``` e após ``` npm start ```
 * Pronto agora na a aplicação web pode ser acessada no localhost:3000
+
+##### Como mudar as configs do banco de dados:
+
+Na arquivo do backend app.module.ts está toda a configuração de integração com o banco de dados:
+
+![image](https://user-images.githubusercontent.com/65303066/189225144-52d0e709-5b00-4254-8fa1-865305cf2201.png)
+
+Se alguma mudança for feita deverá ser rodado os comandos ``` npm run build  ``` e ``` npm start ``` novamente
 
 ### Funcionalidade:
 
