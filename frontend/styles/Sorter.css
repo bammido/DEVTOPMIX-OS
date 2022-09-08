@@ -1,0 +1,13 @@
+.MainDivSort{
+    display: flex;
+    justify-content: center;
+    margin: 35px 0;
+}
+
+.SelectSort{
+    border: 1px solid;
+}
+
+.SubDivSort{
+    margin-right: 5px;
+}

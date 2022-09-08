@@ -1,0 +1,25 @@
+.MainDivFilter{
+    display: flex;
+    justify-content: center;
+    margin: 35px 0;
+}
+
+.SelectFilter{
+    border: 1px solid;
+}
+
+.SubDivFilter{
+    margin-right: 5px;
+}
+
+#optionsDiv{
+    /* width: 175px; */
+    display: flex;
+    align-items: center;
+}
+
+#select{
+    width: 100%;
+    overflow: hidden;
+}
+

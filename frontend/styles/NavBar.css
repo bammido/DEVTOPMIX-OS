@@ -1,0 +1,25 @@
+.Nav{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    /* max-width: 450px; */
+}
+
+.MainDivNav{
+    background-color: rgb(160, 62, 234);;
+    ;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.NavButton{
+    opacity: 0.5;
+    transition: 300ms;
+}
+
+.NavButton:hover{
+    opacity: 1;
+    transition: 300ms;
+}

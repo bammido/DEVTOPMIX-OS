@@ -1,0 +1,42 @@
+.Submit{
+    width: 80%;
+height: 35px;
+margin: 35px 0;
+background-color: rgb(160, 62, 234);
+;
+}
+
+.Input{
+    width: 80%;
+height: 35px;
+border: 3px solid rgb(160, 62, 234);
+border-radius: 5px;
+padding: 5px 10px;
+}
+
+.Input:disabled{
+    background-color: rgb(0,0,0,0.1);
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.Form{
+    width: 80%;
+max-width: 450px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.Centralizer{
+    width: 100vw;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.LoginDiv{
+    align-items: start;
+    margin-top: 35px;
+}

@@ -2,41 +2,43 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/sequelize';
 import { CreateOrdensDeServicoDto } from './dto/create-ordens-de-servico.dto';
 import { UpdateOrdensDeServicoDto } from './dto/update-ordens-de-servico.dto';
-import { OrdemDeServico } from './entities/ordens-de-servico.entity';
+import { OrdensDeServico } from './entities/ordens-de-servico.entity';
 
 @Injectable()
 export class OrdensDeServicoService {
 
-  constructor( 
-    @InjectModel(OrdemDeServico)
-    private OrdemDeServicoModel: typeof OrdemDeServico ){}
-
-  create(createOrdensDeServicoDto: CreateOrdensDeServicoDto) {
-    return this.OrdemDeServicoModel.create( createOrdensDeServicoDto as any ) ;
+  constructor(
+    @InjectModel(OrdensDeServico)
+    private OrdensDeServicoModel: typeof OrdensDeServico
+  ){}
+  
+  async create(createOrdensDeServicoDto: CreateOrdensDeServicoDto, id: string) {
+    const newOrdensDeServico = await this.OrdensDeServicoModel.create({...createOrdensDeServicoDto, id})
+    return newOrdensDeServico;
   }
 
   findAll() {
-    return this.OrdemDeServicoModel.findAll();
+    return this.OrdensDeServicoModel.findAll();
   }
 
-  findOne(id: number): Promise<OrdemDeServico> {
-    return this.OrdemDeServicoModel.findOne({
+  findByColaborador(colaborador: string) {
+    const ordemDeServico = this.OrdensDeServicoModel.findAll({
       where: {
-        id,
-      },
-    });
+        colaborador
+      }
+    })
+    return ;
   }
 
-
-  findSome(limit: number) {
-    return this.OrdemDeServicoModel.findAll()
+  findOne(id: string) {
+    return `This action returns a #${id} ordensDeServico`;
   }
 
-  update(id: number, updateOrdensDeServicoDto: UpdateOrdensDeServicoDto) {
+  update(id: string, updateOrdensDeServicoDto: UpdateOrdensDeServicoDto) {
     return `This action updates a #${id} ordensDeServico`;
   }
 
-  remove(id: number) {
+  remove(id: string) {
     return `This action removes a #${id} ordensDeServico`;
   }
 }

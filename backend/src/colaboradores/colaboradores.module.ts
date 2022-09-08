@@ -2,10 +2,10 @@ import { Module } from '@nestjs/common';
 import { ColaboradoresService } from './colaboradores.service';
 import { ColaboradoresController } from './colaboradores.controller';
 import { SequelizeModule } from '@nestjs/sequelize';
-import { Colaborador } from './entities/colaborador.entity';
+import { Colaboradore } from './entities/colaboradore.entity';
 
 @Module({
-  imports: [SequelizeModule.forFeature([Colaborador,])],
+  imports: [SequelizeModule.forFeature([Colaboradore])],
   controllers: [ColaboradoresController],
   providers: [ColaboradoresService]
 })

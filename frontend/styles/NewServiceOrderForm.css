@@ -1,0 +1,15 @@
+.TextArea{
+    padding: 5px 10px;
+    height: 100px;
+    width: 80%;
+    border: 1px solid;
+}
+
+.Label{
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.Select{
+    border: 1px solid;
+}

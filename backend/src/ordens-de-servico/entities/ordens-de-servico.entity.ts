@@ -1,17 +1,27 @@
-import { Column, Table, Model } from "sequelize-typescript";
+import { Column, Table, Model} from 'sequelize-typescript'
 
-@Table({ 
-    tableName: 'OrdensDeServico',
+@Table({
+    tableName: "Ordensdeservico"
 })
+export class OrdensDeServico extends Model{
+   @Column({
+    primaryKey: true
+   })
+   id: string
 
-export class OrdemDeServico extends Model {
+   @Column({
+    allowNull: false
+   })
+   cliente: string
 
-    @Column
-    cliente: number;
+   @Column({
+    allowNull: false
+   })
+   colaborador: string
 
-    @Column
-    colaborador: number;
-    
-    @Column
-    texto: string;
+   @Column({
+    allowNull: true,
+   })
+   texto: string
+
 }

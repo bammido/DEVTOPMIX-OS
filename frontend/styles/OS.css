@@ -1,0 +1,50 @@
+.OSMainDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.OSDivInfos{
+    border-bottom: 1px solid;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.OSInfosTittle{
+    font-weight: bold;
+}
+
+.OSInfos{
+    text-align: center;
+    margin-bottom: 5px;
+    width: 150px;
+    overflow: hidden;
+}
+
+.OSInfosSpan{
+    max-width: 50px;
+    overflow: hidden;
+}
+
+.Table{
+    display: 'flex' ;
+    flex-direction: 'Column';
+    align-items: 'center';
+}
+
+@media screen and (max-width: 450px) {
+    .OSInfos{
+        width: 100px;
+    }
+
+    .OSInfosTittle{
+        font-size: 12px;
+    }
+
+    .OSInfosSpan{
+        font-size: 12px;
+    }
+}
