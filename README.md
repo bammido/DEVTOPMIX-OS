@@ -16,13 +16,13 @@ Projeto não foi finalizado 100%, porém já é possível realizar as principais
 
 #### Passos: 
 
-* Primeiro vá até a pasta backend e rode o comando ``` npm i ```, em seguida ``` npm run build  ``` e após ``` npm start ```
-* Após isso use um programa ou extensão para fazer uma request do tipo post para criar um colaborador de teste no endpoint 'http://loclhost:3003/colaboradores' com um body contendo nome, email e senha.  ``` {
+* Primeiro vá até a pasta backend pelo terminal e rode o comando ``` npm i ```, em seguida ``` npm run build  ``` e após ``` npm start ```
+* Após isso como o servidor rodando use um programa ou extensão (ex: postman) para fazer uma request do tipo post para criar um colaborador de teste no endpoint 'http://loclhost:3003/colaboradores' com um body contendo nome, email e senha.  ``` {
 "nome": "admin",
 "email": "admin@admin.com",
 "senha": "admin"
 } ```
-* Agora vá até a pasta fronend e siga o primeiro passo  ``` npm i ```, em seguida ``` npm run build  ``` e após ``` npm start ```
+* Abra outro terminal e vá até a pasta fronend e siga o primeiro passo  ``` npm i ```, em seguida ``` npm run build  ``` e após ``` npm start ```
 * Pronto agora na a aplicação web pode ser acessada no localhost:3000
 
 ##### Como mudar as configs do banco de dados:
@@ -33,7 +33,7 @@ Na arquivo do backend app.module.ts está toda a configuração de integração 
 
 Se alguma mudança for feita deverá ser rodado os comandos ``` npm run build  ``` e ``` npm start ``` novamente
 
-### Funcionalidade:
+### Funcionalidades:
 
 * fazer login, ao logar um cookie é criado com um token recebido do backend com duração de sessão de uma hora após esse tempo não será possível acessar as funcionalidades de usuário sendo redirecionado para login
 * É possível criar novas ordens de serviço , caso esteja logado
@@ -48,3 +48,8 @@ Se alguma mudança for feita deverá ser rodado os comandos ``` npm run build  `
 * todas as entidades possuem id gerado pelo backend
 * a data de criação das OS é gerada pelo backend
 * o banco de dados começa zerado
+* não possuo experiência com docker, foi a única tecnologia que não consegui implementar no projeto =/
+
+### Considerações
+
+Agradeço pela oportunidade e gostaria de destacar que foi o meu primeiro contato com NestJS e NextJS, foi um aprendizado muito grande. Caso seja o gostem do projeto espero poder aprender mais dessas stacks ( principalmente Docker que não consegui implementar) com vocês!
