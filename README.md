@@ -4,6 +4,9 @@
 
 Projeto não foi finalizado 100%, porém já é possível realizar as principais funcionalidades
 
+![image](https://user-images.githubusercontent.com/65303066/189224143-026b438e-8b4e-4d3c-be50-b917bdf7c788.png)
+
+
 ### Como Rodar
 
 #### Requisitos:
