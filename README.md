@@ -40,3 +40,4 @@ Projeto não foi finalizado 100%, porém já é possível realizar as principais
 
 * todas as entidades possuem id gerado pelo backend
 * a data de criação das OS é gerada pelo backend
+* o banco de dados começa zerado
