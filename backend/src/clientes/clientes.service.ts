@@ -7,31 +7,41 @@ import { Cliente } from './entities/cliente.entity';
 @Injectable()
 export class ClientesService {
 
-  constructor(
-    @InjectModel(Cliente)
-    private CilentesModel: typeof Cliente ){}
+constructor(
+  @InjectModel(Cliente)
+  private ClienteModel: typeof Cliente
+){}
 
-  create(createClienteDto: CreateClienteDto) {
-    return this.CilentesModel.create( createClienteDto as any);
+  async create(createClienteDto: CreateClienteDto, id: string) {
+    const newCliente = await this.ClienteModel.create({...createClienteDto, id})
+    return newCliente;
   }
 
-  findAll(): Promise<Cliente[]> {
-    return this.CilentesModel.findAll();
+  findAll() {
+    return this.ClienteModel.findAll();
   }
 
-  findOne(id: number): Promise<Cliente> {
-    return this.CilentesModel.findOne({
+  findByName(nome: string) {
+    return this.ClienteModel.findOne({
       where: {
-        id,
-      },
+        nome
+      }
     });
   }
 
-  update(id: number, updateClienteDto: UpdateClienteDto) {
+  findOne(id: string) {
+    return this.ClienteModel.findOne({
+      where: {
+        id
+      }
+    })
+  }
+
+  update(id: string, updateClienteDto: UpdateClienteDto) {
     return `This action updates a #${id} cliente`;
   }
 
-  remove(id: number) {
+  remove(id: string) {
     return `This action removes a #${id} cliente`;
   }
 }

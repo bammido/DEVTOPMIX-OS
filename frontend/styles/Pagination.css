@@ -1,0 +1,49 @@
+.SelectedButton{
+    border: 1px solid rgb(255,255,255, 0.5);
+    border-radius: 5px;
+    transition: 500ms;
+    color: black;
+
+    background-color: rgb(160, 62, 234);
+    margin: 0 2px;
+}
+
+.SelectedButton:hover{
+    transition: 500ms;
+    background-color: lightgray;
+}
+
+.ButtonPagination{
+    border: 1px solid rgb(255,255,255, 0.5);
+    background-color: transparent;
+    border-radius: 5px;
+    transition: 500ms;
+    color: black;
+}
+
+.ButtonPagination:hover{
+    transition: 500ms;
+    background-color: lightgray;
+}
+
+.UnSelectedButton {
+    border: 1px solid rgb(255,255,255, 0.5);
+    background-color: transparent;
+    border-radius: 5px;
+    transition: 500ms;
+    color: black;
+
+    margin: 0 2px;
+}
+.UnSelectedButton:hover{
+    transition: 500ms;
+    background-color: lightgray;
+}
+
+.MainDivPagination{
+    margin-top: 20px;
+}
+
+.Dots{
+    margin: 0 8px;
+}

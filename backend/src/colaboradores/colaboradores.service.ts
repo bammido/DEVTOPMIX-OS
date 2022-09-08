@@ -2,37 +2,71 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/sequelize';
 import { CreateColaboradoreDto } from './dto/create-colaboradore.dto';
 import { UpdateColaboradoreDto } from './dto/update-colaboradore.dto';
-import { Colaborador } from './entities/colaborador.entity';
+import { Colaboradore } from './entities/colaboradore.entity';
+
 
 @Injectable()
 export class ColaboradoresService {
-
 constructor(
-  @InjectModel(Colaborador)
-  private ColaboradorModel: typeof Colaborador
+@InjectModel(Colaboradore)
+private ColaboradorModel: typeof Colaboradore
 ){}
 
-  create(createColaboradoreDto: CreateColaboradoreDto) {
-    return this.ColaboradorModel.create(createColaboradoreDto as any);
+  create(createColaboradoreDto, id: string) {
+    const newColaborador = {...createColaboradoreDto, id}
+    return this.ColaboradorModel.create(newColaborador);
   }
 
-  findAll(): Promise<Colaborador[]>  {
+  findAll() {
     return this.ColaboradorModel.findAll();
   }
 
-  findOne(id: number): Promise<Colaborador> {
+  findOne(id: string) {
     return this.ColaboradorModel.findOne({
       where: {
-        id,
-      },
+        id
+      }
     });
   }
 
-  update(id: number, updateColaboradoreDto: UpdateColaboradoreDto) {
+  findByEmail(email:string) {
+    return this.ColaboradorModel.findOne({
+      where: {
+        email
+      }
+    })
+  }
+
+  async verifyIsSignUp(email: string){
+    const colaborador = await this.ColaboradorModel.findOne({
+      where: {
+        email
+      }
+    })
+
+    return colaborador?.nome? true : false
+
+  }
+
+  async login(email: string, senha: string) {
+    const colaborador = await this.ColaboradorModel.findOne({
+      where: {
+        email,
+        senha
+      }
+    })
+    return colaborador
+  }
+
+  update(id: string, updateColaboradoreDto: UpdateColaboradoreDto) {
     return `This action updates a #${id} colaboradore`;
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} colaboradore`;
+  remove(id: string) {
+    return this.ColaboradorModel.destroy({
+      where: {
+        id
+      }
+    });
   }
 }

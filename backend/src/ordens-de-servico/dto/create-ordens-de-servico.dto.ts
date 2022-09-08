@@ -1,7 +1,5 @@
 export class CreateOrdensDeServicoDto {
-    data: string;
-    cliente: number;
-    colaborador: number;
-    texto: string
-    
+    cliente: string;
+    colaborador: string;
+    texto: string | null
 }
